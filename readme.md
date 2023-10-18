@@ -15,5 +15,5 @@ Hello! You've found my (other) rocket project! Minimum diameter!
 
 ## Current Schematic
 <p align="center">
-  <img src="https://github.com/aihphysics/L1P/blob/main/rocket_figure.png?raw=true" />
+  <img src="https://github.com/aihphysics/L1P/blob/main/rocket_figure.png" />
 </p>
