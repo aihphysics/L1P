@@ -1,7 +1,7 @@
-# L1M Rocket Project
+# Rocket Project
 
 ## Introduction
-Hello! You've found my (other) rocket project! Minimum diameter!
+Hello! You've found my (third) rocket project! This is the one that'll probably work!
 
 * Total length 1058mm.
 * Cardboard Hull, 53.8mm outer diameter, 2mm wall thickness.
