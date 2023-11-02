@@ -1,0 +1,38 @@
+{
+    "parameterSets": {
+        "Nosecone": {
+            "Base_Units": "1",
+            "Cone_Length": "250",
+            "Cone_Radius": "53.8",
+            "Cone_Style": "9",
+            "Gusset_Thickness": "0.1",
+            "Gusset_Threshold": "0.15",
+            "Gusset_Width": "0.25",
+            "Haack_Series_C": "0",
+            "Ignore_Printer_Size": "false",
+            "Parabolic_K": "0.5",
+            "Power_Series_N": "0.5",
+            "Printer_X": "250",
+            "Printer_Y": "250",
+            "Printer_Z": "250",
+            "Secant_Ogive_Shape": "0.5",
+            "Shoulder_Base": "false",
+            "Shoulder_Inset": "1.5",
+            "Shoulder_Length": "60",
+            "Smoothness": "25",
+            "Tab_Length": "0.25",
+            "Tab_Thickness": "0.1",
+            "Tab_hGap": "0.02",
+            "Tab_vGap": "0.05",
+            "Tip_Length": "3",
+            "Tip_Radius": "0.5",
+            "Wall_Thickness": "1.5",
+            "conic_name": "conic",
+            "elliptical_name": "elliptical",
+            "ogive_name": "ogive"
+        }
+    },
+    "fileFormatVersion": "1",
+    "parameterSets": "",
+    "parameterSets": ""
+}
