@@ -479,27 +479,36 @@ use <bolt_assembly.scad>;
 
 shoulder_od=(Cone_Radius-Shoulder_Inset)*2;
 shoulder_id=shoulder_od - (Wall_Thickness*2);
-
+n_bolts=4;
+//intersection(){
 difference(){
-union(){
-    // Original Nosecone
-    scale([Base_Units, Base_Units, Base_Units]) {
-      solidLength = FullLen - domain[0];
-      nLayers = Ignore_Printer_Size ? 1 : ceil(solidLength / Printer_Z);
-      layerHeight = solidLength / nLayers;
-      layerGap = 25.4 / Base_Units; // == 1 inch
+    union(){
+            // Original Nosecone
+            scale([Base_Units, Base_Units, Base_Units]) {
+              solidLength = FullLen - domain[0];
+              nLayers = Ignore_Printer_Size ? 1 : ceil(solidLength / Printer_Z);
+              layerHeight = solidLength / nLayers;
+              layerGap = 25.4 / Base_Units; // == 1 inch
 
-      echo(str("NOSE CONE: ", cone_name, "   R=", R, ", L=", L, ", Layers=", nLayers));
-      for (layer = [1:1]) {
-        translate([0,0,(nLayers - layer) * layerGap]) {
-          doNoseCone(layer, (layer - 1) * layerHeight + domain[0], layer * layerHeight + domain[0]);
+              echo(str("NOSE CONE: ", cone_name, "   R=", R, ", L=", L, ", Layers=", nLayers));
+              for (layer = [2:2]) {
+                translate([0,0,(nLayers - layer) * layerGap]) {
+                  doNoseCone(layer, (layer - 1) * layerHeight + domain[0], layer * layerHeight + domain[0]);
+                }
+              }
+            }
+        
+            // Shoulder Expansion
+            shoulder_nuts( Shoulder_Length, 20, shoulder_id, shoulder_od, n_bolts );
         }
-      }
-    }
-    
-    // Shoulder Expansion
-    //shoulder_insert(shoulder_od, shoulder_id, Shoulder_Length/2);
-}
+    shoulder_bolts( Shoulder_Length, 20, shoulder_id, shoulder_od, n_bolts );
+ }
+// cube(1000);
+// }
+
+//    boltholes
+//}
+//translate( [0, 0, 20 ] )bolt_assembly( 50.8-5, 6 );
 
 //translate([0,0,20]) bolt_assembly(shoulder_id, 4);
-}
+  //}
